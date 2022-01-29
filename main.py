@@ -4,13 +4,30 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():
+@app.route('/home')
+def home():
     return render_template('index.html')
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
+@app.route('/profile')
+def profile():
+    return render_template('app-profile.html')
+
+@app.route('/news')
+def news():
+    return render_template('news.html')
+
+@app.route('/password')
+def password():
+    return render_template('password.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
- 
