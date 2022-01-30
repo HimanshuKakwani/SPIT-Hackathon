@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        chartit();
+        async function chartit(){
+
+            await getData();
+
+            const xlabels = [];
+            const yprices = [];
+        
+            const data = {
+            labels: xlabels,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: yprices,
+            }]
+            };
+        
+            const config = {
+            type: 'line',
+            data: data,
+            options: {}
+            };
+        }
+
+        async function getData() {
+            const response = await fetch('/predicted_df.csv');
+            const data1 = await response.text();
+            const table = data1.split('\n');
+            table.forEach( row => {
+                const cols = row.split(',');
+                const date = cols[5]
+                xlabels.push(year);
+                const price = cols[2]
+                yprices.push(price)
+            })
+        };
+      </script>
+      <script>
+        const myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+      </script>
+                  
+</body>
+</html>
