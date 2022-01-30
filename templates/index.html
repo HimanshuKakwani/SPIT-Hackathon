@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% block title %}Stonks Exchange{% endblock %}
+{% block body %}
+<!-- Main Prediction -->
+<div>
+    <canvas id="myChart" width="80" height="24"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const labels = [
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+      'January',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'MARUTI.NS',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [6859.200195, 6455.649902, 7086.299805, 7515.899902, 6977.700195, 6846.100098, 7338.049805, 7482.399902, 7067.799805, 7426.450195, 8550.950195],
+      }]
+    };
+  
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+  </script>
+<script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>    
+<!-- Main Prediction -->
+<!-- List -->
+
+<!-- List -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="active-member">
+                    <div class="table-responsive">
+                        <table class="table table-xs mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Ticker</th>
+                                    <th>Price (in INR)</th>
+                                    <th>ForeCast Score</th>
+                                    <th>Consensus</th>
+                                    <th>Upside/Downside</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="./images/avatar/1.jpg" class=" rounded-circle mr-3" alt="">Maruti Suzuki India Limited</td>
+                                    <td>MARUTI.NS</td>
+                                    <td>
+                                        <span>8,550.95</span>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <div class="progress" style="height: 6px">
+                                                <div class="progress-bar bg-success" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Strong Buy</td>
+                                    <td>
+                                        <span>-3.05%</span>
+                                        <span class="m-0 pl-3">10 sec ago</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="./images/avatar/2.jpg" class=" rounded-circle mr-3" alt="">JSW Steel Limited</td>
+                                    <td>JSWSTEEL.NS</td>
+                                    <td><span>628.05</span></td>
+                                    <td>
+                                        <div>
+                                            <div class="progress" style="height: 6px">
+                                                <div class="progress-bar bg-success" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Buy </td>
+                                    <td>
+                                        <span>0.31%</span>
+                                        <span class="m-0 pl-3">50 sec ago</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="./images/avatar/3.jpg" class=" rounded-circle mr-3" alt="">Yes Bank Limited</td>
+                                    <td>YESBANK.NS</td>
+                                    <td><span>13.35</span></td>
+                                    <td>
+                                        <div>
+                                            <div class="progress" style="height: 6px">
+                                                <div class="progress-bar bg-warning" style="width: 60%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fa fa-circle-o text-warning  mr-2"></i> Hold</td>
+                                    <td>
+                                        <span>-1.48%</span>
+                                        <span class="m-0 pl-3">10 sec ago</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="./images/avatar/6.jpg" class=" rounded-circle mr-3" alt="">Sun Pharmaceutical Industries Limited </td>
+                                    <td>SUNPHARMA.NS</td>
+                                    <td><span>827.35</span></td>
+                                    <td>
+                                        <div>
+                                            <div class="progress" style="height: 6px">
+                                                <div class="progress-bar bg-success" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Strong Buy</td>
+                                    <td>
+                                        <span>+1.88%</span>
+                                        <span class="m-0 pl-3">20 sec ago</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="./images/avatar/4.jpg" class=" rounded-circle mr-3" alt=""> HDFC Bank Limited </td>
+                                    <td>HDFCBANK.NS</td>
+                                    <td><span>1,463.25</span></td>
+                                    <td>
+                                        <div>
+                                            <div class="progress" style="height: 6px">
+                                                <div class="progress-bar bg-success" style="width: 64%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Hold</td>
+                                    <td>
+                                        <span>-0.79%</span>
+                                        <span class="m-0 pl-3">30 sec ago</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="./images/avatar/5.jpg" class=" rounded-circle mr-3" alt="">Tata Communications Limited</td>
+                                    <td>TATACOMM.NS</td>
+                                    <td><span>1,267.35</span></td>
+                                    <td>
+                                        <div>
+                                            <div class="progress" style="height: 6px">
+                                                <div class="progress-bar bg-warning" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fa fa-circle-o text-warning  mr-2"></i> Hold</td>
+                                    <td>
+                                        <span>-0.84%</span>
+                                        <span class="m-0 pl-3">10 sec ago</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>                        
+    </div>
+</div>
+<div class="content-body">
+
+    <div class="row page-titles mx-0">
+        <div class="col p-md-0">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+            </ol>
+        </div>
+    </div>
+    <!-- row -->
+
+    <div class="container-fluid">
+        <!-- End Row -->
+        <div class="row">
+            <div class="col-12 m-b-30">
+                <h4 class="d-inline">News</h4>
+                <p class="text-muted">All market updates you'll need</p>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h5 class="card-title">Cryto on the Rise</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">28/01/22</h6>
+                            </div>
+                            <img class="img-fluid" src="images/big/img1.jpg" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis risus a mi volutpat, a sollicitudin neque molestie. Sed pharetra libero at turpis aliquet laoreet. Aliquam vel ipsum elementum, auctor risus ut, vulputate mi.</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text d-inline"><small class="text-muted">Last updated few hours ago</small>
+                                </p><a href="#" class="card-link float-right"><small>Read More</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h5 class="card-title">Tata Group Takes over Air India</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">28/01/22</h6>
+                            </div>
+                            <img class="img-fluid" src="images/big/img2.jpg" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis risus a mi volutpat, a sollicitudin neque molestie. Sed pharetra libero at turpis aliquet laoreet. Aliquam vel ipsum elementum, auctor risus ut, vulputate mi.</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text d-inline"><small class="text-muted">Last updated 1 day ago</small>
+                                </p><a href="#" class="card-link float-right"><small>Read More</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h5 class="card-title">Russia updates its CryptoCurrency Laws</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">26/01/22</h6>
+                            </div>
+                            <img class="img-fluid" src="images/big/img3.jpg" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis risus a mi volutpat, a sollicitudin neque molestie. Sed pharetra libero at turpis aliquet laoreet. Aliquam vel ipsum elementum, auctor risus ut, vulputate mi.</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text d-inline"><small class="text-muted">Last updated 2 days ago</small>
+                                </p><a href="#" class="card-link float-right"><small>Read More</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h5 class="card-title">Crypto SLides Puts a  Outlook of Billions</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">24/01/22</h6>
+                            </div>
+                            <img class="img-fluid" src="images/big/img4.jpg" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis risus a mi volutpat, a sollicitudin neque molestie. Sed pharetra libero at turpis aliquet laoreet. Aliquam vel ipsum elementum, auctor risus ut, vulputate mi.</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text d-inline"><small class="text-muted">Last updated 3 days ago</small>
+                                </p><a href="#" class="card-link float-right"><small>Read More</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>              
+        <!-- End Row -->
+                <!-- End Col -->
+            </div>
+        </div>
+    </div>
+    <!-- #/ container -->
+</div>
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+{% endblock %}

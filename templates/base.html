@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} {% endblock %}</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/logo.png">
+  <!-- Our Stylesheet -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+</head>
+<body class="flex flex-col h-[100vh] m-0">
+  <!-- Nav-Header start -->
+  <div class="nav-header">
+    <div class="brand-logo">
+        <a href="/home">
+            <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+            <span class="logo-compact"><img src="{{ url_for('static', filename='images/logo-compact.png')}}" alt=""></span>
+            <span class="brand-title">
+                <img src="{{ url_for('static', filename='images/my_logo.png')}}" alt="">
+            </span>
+        </a>
+    </div>
+  </div>
+  <!-- Nav-Header end -->
+  <!-- Header start -->
+  <div class="header">    
+    <div class="header-content clearfix">
+        
+        <div class="nav-control">
+            <div class="hamburger">
+                <span class="toggle-icon" id="toggle"><i class="icon-menu"></i></span>
+            </div>
+        </div>
+        <div class="header-left">
+            <div class="input-group icons">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
+                </div>
+                <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
+                <div class="drop-down animated flipInX d-md-none">
+                    <form action="#" method="get">
+                        <input type="text" class="form-control" placeholder="Search" name="q">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <ul class="clearfix">
+                <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                        <i class="mdi mdi-bell-outline"></i>
+                        <span class="badge badge-pill gradient-2">4</span>
+                    </a>
+                    <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
+                        <div class="dropdown-content-heading d-flex justify-content-between">
+                            <span class="">4 New Notifications</span>  
+                            <a href="javascript:void()" class="d-inline-block">
+                                <span class="badge badge-pill gradient-2">4</span>
+                            </a>
+                        </div>
+                        <div class="dropdown-content-body">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void()">
+                                        <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="mdi mdi-bell-outline"></i></span>
+                                        <div class="notification-content">
+                                            <h6 class="notification-heading">Recent Updates For you</h6>
+                                            <span class="notification-text">1 hour ago</span> 
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">
+                                        <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
+                                        <div class="notification-content">
+                                            <h6 class="notification-heading">Tata Group takes over....</h6>
+                                            <span class="notification-text">8 hour ago</span> 
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">
+                                        <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
+                                        <div class="notification-content">
+                                            <h6 class="notification-heading">Crypto is on the Rise....</h6>
+                                            <span class="notification-text">1 day ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">
+                                        <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="mdi mdi-bell-outline"></i></span>
+                                        <div class="notification-content">
+                                            <h6 class="notification-heading">Elon Musk Tweeted....</h6>
+                                            <span class="notification-text">2 days ago</span> 
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </li>
+                <li class="icons dropdown">
+                    <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
+                        <span class="activity active"></span>
+                        <img src="{{ url_for('static', filename='images/1.png')}}" height="40" width="40" alt="">
+                    </div>
+                    <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                        <div class="dropdown-content-body">
+                            <ul>
+                                <li>
+                                    <a href="/profile"><i class="icon-user"></i> <span>Profile</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">
+                                        <i class="icon-envelope-open"></i> <span>Mails</span> <div class="badge gradient-3 badge-pill gradient-1">3</div>
+                                    </a>
+                                </li>
+                                
+                                <hr class="my-2">
+                                <li>
+                                    <a href="#"><i class="icon-lock"></i> <span>Security</span></a>
+                                </li>
+                                <li><a href="/login"><i class="icon-key"></i> <span>Logout</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <!-- Header end -->
+  <!-- Sidebar start -->
+  <div class="nk-sidebar" id="sidebar">           
+          <div class="nk-nav-scroll">
+              <ul class="metismenu" id="menu">
+                  <li class="nav-label">Navigation</li>
+                  <li>
+                          <a href="/home"><i class="icon-speedometer menu-icon"></i><span class="nav-text">Home</span></a>
+                  </li>
+                  <li>
+                      <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                          <i class="icon-graph menu-icon"></i> <span class="nav-text">Trending Stocks</span>
+                      </a>
+                      <ul aria-expanded="false">
+                          <li><a href="/line-chart">Line Chart</a></li>
+                          <li><a href="/area-chart">Area Chart</a></li>
+                          <li><a href="/bar-chart">Bar Chart</a></li>
+                          <li><a href="/nse">NSE in 52 Weeks</a></li>
+                          <li><a href="/nse-2">NSE Fluctuations in 52 Weeks</a></li>
+                          <li><a href="/nse-3">NSE Monthly</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                          <a href="/news"><i class="icon-grid menu-icon"></i><span class="nav-text">News</span></a>
+                  </li>
+              </ul>
+          </div>
+  </div>
+  <script>
+    const toggle = document.getElementById("toggle");
+    const sidebar = document.getElementById("sidebar");
+    toggle.onclick = function(){
+        toggle.classList.toggle('active');
+        sidebar.classList.toggle('active')
+    }
+</script>
+  <!-- Sidebar end -->
+  <!-- Content body start -->
+  <div class="page-contents">
+    {% block body %}
+    {% endblock %}
+  </div>
+  <!-- Content body end -->
+  <!-- Footer start -->
+  <div class="footer">
+    <div class="copyright">
+        <p>Designed & Developed by Team <a href="https://github.com/PrachetShah/SPIT-Hackathon">Outliers</a> - Stonks Exhcange </p>
+    </div>
+  </div>
+  <!-- Footer end -->
+  <!-- Scripts -->
+  <script src="/static/plugins/common/common.min.js"></script>
+    <script src="/static/js/custom.min.js"></script>
+    <script src="/static/js/settings.js"></script>
+    <script src="/static/js/gleek.js"></script>
+    <script src="/static/js/styleSwitcher.js"></script>
+
+    <!-- Chartjs -->
+    <script src="/static/plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="/static/plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="/static/plugins/d3v3/index.js"></script>
+    <script src="/static/plugins/topojson/topojson.min.js"></script>
+    <script src="/static/plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="/static/plugins/raphael/raphael.min.js"></script>
+    <script src="/static/plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="/static/plugins/moment/moment.min.js"></script>
+    <script src="/static/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="/static/plugins/chartist/js/chartist.min.js"></script>
+    <script src="/static/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+
+    <script src="/static/js/dashboard/dashboard-1.js"></script>
+</body>
+</html>

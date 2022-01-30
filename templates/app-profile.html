@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block body %}
+<div class="content-body">
+
+    <div class="row page-titles mx-0">
+        <div class="col p-md-0">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+            </ol>
+        </div>
+    </div>
+    <!-- row -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="media align-items-center mb-4">
+                            <img class="mr-3" src="{{ url_for('static', filename='images/11.png')}}" width="80" height="80" alt="">
+                            <div class="media-body">
+                                <h3 class="mb-0">Jay Jain</h3>
+                                <p class="text-muted mb-0">India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-5">
+                            <div class="col">
+                                <div class="card card-profile text-center">
+                                    <span class="mb-1 text-primary"><i class="icon-people"></i></span>
+                                    <h3 class="mb-0">263</h3>
+                                    <p class="text-muted px-4">Following</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-profile text-center">
+                                    <span class="mb-1 text-warning"><i class="icon-user-follow"></i></span>
+                                    <h3 class="mb-0">263</h3>
+                                    <p class="text-muted">Followers</p>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-danger px-5">Follow Now</button>
+                            </div>
+                        </div>
+
+                        <h4>About Me</h4>
+                        <p class="text-muted">Hi, I'm Jay, has been the industry standard dummy text ever since the 1500s.</p>
+                        <ul class="card-profile__info">
+                            <li class="mb-1"><strong class="text-dark mr-4">Mobile</strong> <span>9867466628</span></li>
+                            <li><strong class="text-dark mr-4">Email</strong> <span>jay4emails@gmail.com</span></li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-lg-8 col-xl-9">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="#" class="form-profile">
+                            <div class="form-group">
+                                <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="2" placeholder="Tell us something about you"></textarea>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <ul class="mb-0 form-profile__icons">
+                                    <li class="d-inline-block">
+                                        <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-user"></i></button>
+                                    </li>
+                                    <li class="d-inline-block">
+                                        <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-paper-plane"></i></button>
+                                    </li>
+                                    <li class="d-inline-block">
+                                        <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-camera"></i></button>
+                                    </li>
+                                    <li class="d-inline-block">
+                                        <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-smile"></i></button>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary px-3 ml-4">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #/ container -->
+</div>
+{% endblock %}
